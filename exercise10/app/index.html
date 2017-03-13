@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app="fhirApp">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Repositorymanagement</title>
+	<meta charset="utf-8" />
+    <link rel="icon" href="img/reh.ico">
+    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap2-toggle.min.css">
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+</head>
+
+<body ng-controller="BodyController">
+
+    <!-- Datumsanzeige rechts oben -->
+    <div class="container">
+        <div class="col-xs-12">
+            <span class="pull-right" ng-bind="date">Datum</span>
+        </div>
+    </div>
+
+    <div ng-include="'templates/NavbarTemplate.html'"></div>
+
+    <div class="container">
+        <div ng-view></div>
+    </div>
+    
+    <!--Einbinden der Dateien-->
+    <script src="lib/es6-shim.min.js"></script>
+    <script src="lib/jquery-1.12.0.min.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/angular-route.min.js"></script>
+    <script src="lib/ui-bootstrap-1.2.1.min.js"></script>
+    <script src="lib/material.min.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/Datum.js"></script>
+    <script src="scripts/Student.js"></script>
+    <script src="scripts/landung.js"></script>
+    <script src="controllers/BodyController.js"></script>
+    <script src="controllers/MoonController.js"></script>
+    <script src="controllers/PatientDetailsController.js"></script>
+    <script src="controllers/NavbarController.js"></script>
+    <script src="controllers/PatientListController.js"></script>
+    <script src="services/FhirService.js"></script>
+
+</body>
+</html>
