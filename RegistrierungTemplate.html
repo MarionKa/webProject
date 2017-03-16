@@ -1,0 +1,116 @@
+﻿<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a id="brand" class="navbar-brand" href="#/repository">
+                <img alt="Brand" src="img/4.png">
+            </a>
+
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+        <div id="menu" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav" ng-controller="NavbarController">
+                <li ng-class="{ active: isActive('/anmeldung')}"><a href="#/anmeldung">Anmelden</a></li>
+                <li ng-class="{ active: isActive('/registrierung')}"><a href="#/registrierung">Registrieren</a></li>
+                <li ng-class="{ active: isActive('/passwort')}"><a href="#/passwort">Passwort vergessen</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="row">
+    <h1 class="col-xs-12 page-header">
+        <large>Registrierung Student</large>
+    </h1>
+</div>
+
+<form name="RegFormular">
+    <div class="panel panel-info">
+        <div class="panel-heading"><h4>Bitte Geben Sie Ihre Daten an, um sich zu registrieren.</h4> </div>
+        <div class="panel-body">
+
+
+            <div class="row">
+                <div class="col-xs-6 form-group">
+                    <label style="line-height: 150%">Vorname:</label>
+                    <input class="form-control" type="text" placeholder="Vorname" name="Vormane" id="Vormane">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-6 form-group">
+                    <label style="line-height: 150%">Nachname:</label>
+                    <input class="form-control" type="text" placeholder="Nachname" name="Nachname" id="Nachname">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-6 form-group">
+                    <label style="line-height: 150%">E-Mail-Adresse:</label>
+                    <input class="form-control" type="email" placeholder="MustermannMa12345@th-nuernberg.de" name="Mail" id="Mail">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-6 form-group">
+                    <button id="reg" type="button" class="btn btn-default" >Registrieren</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var elem = document.getElementById('reg');
+        elem.addEventListener('click', checkFormular);
+
+        //Überprüfung der Formularfeldeingaben: 
+        function checkFormular(){
+            if (document.RegFormular.Vormane.value == ""){
+                alert("Bitte geben Sie Ihren Vornamen ein!");
+                document.RegFormular.Vornamen.focus();  //Positionierung auf fehlerhafte Formularfeldeingabe
+                return false;
+            }
+            if (document.RegFormular.Nachname.value == ""){
+                alert("Bitte geben Sie Ihren Nachnamen ein!");
+                document.RegFormular.Nachname.focus();
+                return false
+            }
+            if (document.RegFormular.Mail.value == ""){
+                alert("Bitte geben Sie Ihre TH E-Mail-Adresse an!");
+                document.RegFormular.Mail.Focus();
+                return false;
+            }
+            if (document.RegFormular.Mail.value.indexOf("@th-nuernberg.de") == -1){
+                alert("Bitte geben Sie die korrekte E-Mail-Adresse an!");
+                document.RegFormular.focus();
+                return false;
+            }
+        }else function registrieren() {
+            alert("Ihre Registrierung wurde beantragt. Sie erhalten in kürze eine E-Mail mit Ihren Zugangsdaten.");
+        }
+    </script>
+</form>
+
+
+<nav class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container">
+        <div id="menu" class="collapse navbar-collapse">
+            <nav aria-label="...">
+                <ul class="nav navbar-nav" ng-controller="NavbarController">
+                    <li>
+                        <ul class="pager">
+                            <li><a href="#/anmeldung">Anmeldung</a></li>
+                            <li><a href="#/registrierung">Registrierung</a></li>
+                            <li><a href="#/passwort">Passwort vergessen</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</nav>
