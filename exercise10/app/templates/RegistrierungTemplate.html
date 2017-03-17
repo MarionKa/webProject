@@ -67,7 +67,32 @@
     </div>
 
     <script>
-        function registrieren() {
+     var elem = document.getElementById('reg');
+        elem.addEventListener('click', checkFormular);
+
+        //Überprüfung der Formularfeldeingaben: 
+        function checkFormular(){
+            if (document.RegFormular.Vormane.value == ""){
+                alert("Bitte geben Sie Ihren Vornamen ein!");
+                document.RegFormular.Vornamen.focus();  //Positionierung auf fehlerhafte Formularfeldeingabe
+                return false;
+            }
+            if (document.RegFormular.Nachname.value == ""){
+                alert("Bitte geben Sie Ihren Nachnamen ein!");
+                document.RegFormular.Nachname.focus();
+                return false
+            }
+            if (document.RegFormular.Mail.value == ""){
+                alert("Bitte geben Sie Ihre TH E-Mail-Adresse an!");
+                document.RegFormular.Mail.Focus();
+                return false;
+            }
+            if (document.RegFormular.Mail.value.indexOf("@th-nuernberg.de") == -1){
+                alert("Bitte geben Sie die korrekte E-Mail-Adresse an!");
+                document.RegFormular.focus();
+                return false;
+            }
+        }else function registrieren() {
             alert("Ihre Registrierung wurde beantragt. Sie erhalten in kürze eine E-Mail mit Ihren Zugangsdaten.");
         }
     </script>
