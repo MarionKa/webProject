@@ -68,17 +68,11 @@
     </div>
 
     <script>
-
-    //window.addEventListener('load', checkFormular);
-    var elem = document.getElementById('regButton');
-    elem.addEventListener('click', checkFormular);
+    	var elem = document.getElementById('regButton');
+    	elem.addEventListener('click', checkFormular);
 
         //Überprüfung der Formularfeldeingaben: 
         function checkFormular(){
-/*        	var vorname = document.getElementById('Vorname');
-    		var nachname = document.getElementById('Nachname');
-    		var mail = document.getElementById('mail');*/
-
             if (document.RegFormular.Vorname.value == ""){
                 alert("Bitte geben Sie Ihren Vornamen ein!");
                 document.RegFormular.Vorname.focus();  //Positionierung auf fehlerhafte Formularfeldeingabe
