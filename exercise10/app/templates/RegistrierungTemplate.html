@@ -80,17 +80,17 @@
             }
             if (document.RegFormular.Nachname.value == ""){
                 alert("Bitte geben Sie Ihren Nachnamen ein!");
-                document.RegFormular.Nachname.focus();
+                document.RegFormular.Nachname.focus(); //Positionierung auf fehlerhafte Formularfeldeingabe
                 return false
             }
             if (document.RegFormular.Mail.value == ""){
                 alert("Bitte geben Sie Ihre TH E-Mail-Adresse an!");
-                document.RegFormular.Mail.Focus();
+                document.RegFormular.Mail.Focus(); //Positionierung auf fehlerhafte Formularfeldeingabe
                 return false;
             }
             if (document.RegFormular.Mail.value.indexOf("@th-nuernberg.de") == -1){
                 alert("Bitte geben Sie die korrekte E-Mail-Adresse an!");
-                document.RegFormular.focus();
+                document.RegFormular.focus(); //Positionierung auf fehlerhafte Formularfeldeingabe
                 return false;
             }
         }else function registrieren() {
