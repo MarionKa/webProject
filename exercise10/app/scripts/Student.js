@@ -8,7 +8,7 @@ function Student(fhirpatient) {
                 return student.Art;
             }
             return undefined;
-        }        
+        },        
 
         "zueins": function () {
             if (student.Berechtigt) {
@@ -19,7 +19,7 @@ function Student(fhirpatient) {
             		return nameElement.Person1
             	}
             return undefined;
-        }
+        },
 
         "lastname": function () {
             if (student.name) {
@@ -41,7 +41,7 @@ function Student(fhirpatient) {
                     return nameElement.given;
             }
             return undefined;
-        },
+        }
 
 
 
