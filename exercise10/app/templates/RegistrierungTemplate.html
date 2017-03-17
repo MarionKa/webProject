@@ -51,10 +51,11 @@
 
             <div class="row">
                 <div class="col-xs-6 form-group">
-                    <label style="line-height: 150%">E-Mail-Adresse:</label>
-                    <input class="form-control"
-                           type="text" placeholder="MustermannMa12345@th-nuernberg.de"
-                           name = "mail" id="mail">
+                    <label>E-Mail-Adresse:</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="MustermannMa12345" aria-describedby="basic-addon2">
+                        <span class="input-group-addon" id="basic-addon2">@th-nuernberg.de</span>
+                    </div>
                 </div>
             </div>
 
@@ -79,17 +80,17 @@
             }
             if (document.RegFormular.Nachname.value == ""){
                 alert("Bitte geben Sie Ihren Nachnamen ein!");
-                document.RegFormular.Nachname.focus();
+                document.RegFormular.Nachname.focus(); //Positionierung auf fehlerhafte Formularfeldeingabe
                 return false
             }
             if (document.RegFormular.Mail.value == ""){
                 alert("Bitte geben Sie Ihre TH E-Mail-Adresse an!");
-                document.RegFormular.Mail.Focus();
+                document.RegFormular.Mail.Focus(); //Positionierung auf fehlerhafte Formularfeldeingabe
                 return false;
             }
             if (document.RegFormular.Mail.value.indexOf("@th-nuernberg.de") == -1){
                 alert("Bitte geben Sie die korrekte E-Mail-Adresse an!");
-                document.RegFormular.focus();
+                document.RegFormular.focus(); //Positionierung auf fehlerhafte Formularfeldeingabe
                 return false;
             }
         }else 
