@@ -1,33 +1,16 @@
-fhirApp.controller("PatientDetailsController",
-    function ($scope, $routeParams, FhirService) {
-        $scope.isEditMode = false;
+'use strict';
 
-        $scope.startEdit = function () {
-            $scope.patient.save();
-            $scope.isEditMode = true;
-        }
+// Declare app level module which depends on filters, and services
+angular.module('myApp', []);
 
-        $scope.acceptEdit = function () {
-            $scope.isEditMode = false;
-        }
+/* Controllers */
+function stageController($scope) {
 
-        $scope.abortEdit = function () {
-            newPatient($scope.patient.storedPatient());
-            $scope.isEditMode = false;
-        }
-        
-        function newPatient(patient) {
-            $scope.patient = patient;
-            $scope.dateHelper = patient.geburtstag();
-        }
+    $scope.username1 = 'Peter Parker';
+    $scope.email1 = 'pparker@gmail.com';
 
-    FhirService.readById($routeParams.id).then(function (patient) {
-        newPatient(patient);
-    })
+    $scope.submitForm = function () {
+        console.info("Here I should implement the logic to send a request to the server.");
+    }
 
-    $scope.$watch('dateHelper', function (newValue, oldValue) {
-        if ($scope.patient && newValue)
-            $scope.patient.geburtstag(newValue);
-    });
-
-});
+}
