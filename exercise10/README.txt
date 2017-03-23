@@ -1,1 +1,0 @@
-﻿Hier entsteht die Lösung von Praktikum 10

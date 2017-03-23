@@ -1,0 +1,23 @@
+﻿{
+	"active": true,
+	"Art": "Webapps",
+	"Typ":"VL",
+	"Pfad": "medinf.efi/.../Webapps/MaierMa12345",
+	"name": [
+		{
+			"family":[ "Maier" ],
+			"given": [ "Mario" ],
+		}
+	],
+	"Berechtigt": [
+		{
+			"family1": "Maier",
+			"given1": "Mario",
+			"family2": "Hofmann",
+			"given2": "Oliver",
+		}
+	],
+	"Gueltig": "20.01.2018",
+	"aktiviert": "JA",
+	"Mail": "MaierMa12345"
+}
