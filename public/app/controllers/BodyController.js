@@ -1,4 +1,4 @@
-﻿fhirApp.controller("BodyController", function ($scope) {
+﻿repoApp.controller("BodyController", function ($scope) {
     // Datum im internationalen Format:
     //$scope.date = new Date().toDateString();
     // Datum im deutschen Format:

@@ -1,5 +1,5 @@
-﻿fhirApp.controller("PatientDetailsController",
-    function ($scope, $routeParams, FhirService) {
+﻿repoApp.controller("PatientDetailsController",
+    function ($scope, $routeParams, RepoService) {
         $scope.isEditMode = false;
 
         $scope.startEdit = function () {
@@ -21,7 +21,7 @@
             $scope.dateHelper = patient.geburtstag();
         }
 
-    FhirService.readById($routeParams.id).then(function (patient) {
+    RepoService.readById($routeParams.id).then(function (patient) {
         newPatient(patient);
     })
 
