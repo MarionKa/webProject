@@ -1,37 +1,6 @@
 ﻿var repoApp = angular.module("repoApp", ['ngRoute']);
 
-repoApp.config(function($routeProvider) {
-    $routeProvider.when('/patient',{
-        templateUrl: 'templates/PatientDetailsTemplate.html',
-        controller: 'PatientDetailsController'
-
-    });
-
-    $routeProvider.when('/patients', {
-        templateUrl: 'templates/PatientListTemplate.html',
-        controller: 'PatientListController'
-
-    });
-
-
-    $routeProvider.when('/about', {
-        templateUrl: 'templates/AboutTemplate.html',
-    });
-
-
-    $routeProvider.when('/moon',{
-        template: '<div id="content"></div>',
-        controller: 'MoonController'
-    });
-
-    $routeProvider.when('/patients/:id', {
-        templateUrl: 'templates/PatientDetailsTemplate.html',
-        controller: 'PatientDetailsController'
-    });
-
-    ///////////////////////////////////////////////////////////////////////
-    //////////////////////////// Projektarbeit ////////////////////////////
-    ///////////////////////////////////////////////////////////////////////
+repoApp .config(function($routeProvider) {
 
     $routeProvider.when('/anmeldung', {
         templateUrl: 'templates/AnmeldungTemplate.html',

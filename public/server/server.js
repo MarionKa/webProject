@@ -1,1 +1,0 @@
-﻿console.log("MDT5/2 Server");
