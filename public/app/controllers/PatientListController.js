@@ -1,6 +1,6 @@
-﻿fhirApp.controller("PatientListController", function ($scope, FhirService) {
+﻿repoApp.controller("PatientListController", function ($scope, RepoService) {
 
-    FhirService.all().then(function (patients) {
+    RepoService.all().then(function (patients) {
         $scope.patients = patients;
     });
 });

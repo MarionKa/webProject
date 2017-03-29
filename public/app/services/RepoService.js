@@ -1,4 +1,4 @@
-﻿fhirApp.factory("FhirService", function ($http) {
+﻿repoApp.factory("RepoService", function ($http) {
 
     var patientArrayPromise = $http.get("data/patient.json")
     .then(function (response) {

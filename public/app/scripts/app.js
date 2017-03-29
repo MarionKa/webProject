@@ -1,6 +1,6 @@
-﻿var fhirApp = angular.module("fhirApp", ['ngRoute']);
+﻿var repoApp = angular.module("repoApp", ['ngRoute']);
 
-fhirApp.config(function($routeProvider) {
+repoApp.config(function($routeProvider) {
     $routeProvider.when('/patient',{
         templateUrl: 'templates/PatientDetailsTemplate.html',
         controller: 'PatientDetailsController'
