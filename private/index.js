@@ -7,6 +7,8 @@ var session = require('express-session');
 
 var app = express();
 
+app.use(express.static('public'));
+
 require('./router')(app);
 
 app.listen(8080, function() {
